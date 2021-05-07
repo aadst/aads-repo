@@ -16,5 +16,39 @@ public class ATM_Transactiion {
             System.out.println();
             System.out.print("Choose the operation you want to perform:");
             int n = s.nextInt();
+            switch(n)
+            {
+                case 1:
+                System.out.print("Enter ammount of money to be withdrawn:");
+                withdraw = s.nextInt();
+                if(amount >= withdraw)
+                {
+                	amount = amount - withdraw;
+                    System.out.println("Withdrawn is Completed, Please Take Your Card!!");
+                }
+                else
+                {
+                    System.out.println("Insufficient Balance");
+                }
+                System.out.println("");
+                break;
+               
+                case 2:
+                System.out.print("Enter money to be deposited:");
+                deposit = s.nextInt();
+                amount = amount + deposit;
+                System.out.println("Your Money has been successfully depsited");
+                System.out.println("");
+                break;
+ 
+                case 3:
+                System.out.println("Balance : "+amount);
+                System.out.println("");
+                break;
+ 
+                case 4:
+                System.exit(0);
+            }
+        }
+    }
 }
-}}
