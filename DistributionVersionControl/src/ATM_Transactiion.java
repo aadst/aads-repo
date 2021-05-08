@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class ATM_Transactiion {
 	public static void main(String args[] )
     { 
-        int balance3 = 6000, withdraw, deposit;
+        int amount = 6000, withdraw, deposit;
         Scanner s = new Scanner(System.in);
         while(true)
         {    
@@ -21,9 +21,9 @@ public class ATM_Transactiion {
                 case 1:
                 System.out.print("Enter ammount of money to be withdrawn:");
                 withdraw = s.nextInt();
-                if(balance3 >= withdraw)
+                if(amount >= withdraw)
                 {
-                	balance3 = balance3 - withdraw;
+                	amount = amount - withdraw;
                     System.out.println("Withdrawn is Completed Successfully");
                 }
                 else
@@ -36,13 +36,13 @@ public class ATM_Transactiion {
                 case 2:
                 System.out.print("Enter money to be deposited:");
                 deposit = s.nextInt();
-                balance3 = balance3 + deposit;
+                amount = amount + deposit;
                 System.out.println("Your Money has been successfully depsited");
                 System.out.println("");
                 break;
  
                 case 3:
-                System.out.println("Balance : "+balance3);
+                System.out.println("Balance : "+amount);
                 System.out.println("");
                 break;
  
